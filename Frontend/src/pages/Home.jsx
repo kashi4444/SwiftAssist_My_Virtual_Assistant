@@ -113,7 +113,7 @@ function Home() {
     synth.speak(greeting);
   }
   useEffect(()=>{
-    document.body.addEventListener("click", handleAllow);
+    document.getElementById("start-btn").addEventListener("click", handleAllow);
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition
     
     const recognition = new SpeechRecognition()
@@ -243,7 +243,7 @@ function Home() {
 
       <h1 className='text-white text-[18px] font-semibold text-wrap'>{userText ? userText : aiText ? aiText : null}</h1>
 
-      {!started && <button className='text-white min-w-[150px] h-[60px] mt-[30px] text-black font-semibold rounded-full text-[19px] bg-blue-400 cursor-pointer px-[20px] py-[10px]' onClick={()=> setStarted(true)}>Let's get started</button>}
+      {!started && <button id='start-btn' className='text-white min-w-[150px] h-[60px] mt-[30px] text-black font-semibold rounded-full text-[19px] bg-blue-400 cursor-pointer px-[20px] py-[10px]' onClick={()=> setStarted(true)}>Let's get started</button>}
 
       
     </div>

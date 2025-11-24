@@ -37,7 +37,9 @@ export const updateAssistant = async(req, res)=>{
 
 export const askToAssistant = async(req, res)=>{
     try{
-        const {command} = req.body;
+        console.log("askToAssistant");
+        const {command} = req.body; 
+        console.log("command-: ", command);
         const user = await User.findById(req.userId);
         user.history.push(command);
         user.save();
