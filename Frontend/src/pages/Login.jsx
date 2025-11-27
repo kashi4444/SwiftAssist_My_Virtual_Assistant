@@ -5,6 +5,7 @@ import { IoEyeOff } from "react-icons/io5";
 import { useNavigate } from 'react-router-dom';
 import { userDataContext } from '../context/UserContext.jsx';
 import axios from 'axios'
+import Footer from '../components/Footer.jsx';
 
 
 
@@ -51,6 +52,7 @@ function Login() {
     <p className='text-white text-[18px] cursor-pointer'>Want to create a new account ? <span className='text-blue-400' onClick={()=> navigate('/signup')}>SignUp</span></p>
     </form>
     
+    <Footer/>
     </div>
   )
 }

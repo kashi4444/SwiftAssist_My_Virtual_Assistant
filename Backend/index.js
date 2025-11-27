@@ -15,7 +15,7 @@ const port = process.env.PORT || 5000;
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-    origin :"https://swiftassist-my-virtual-assistant-frontend.onrender.com",
+    origin : process.env.FRONTEND_URL,
     credentials: true
 }))
 app.use("/api/auth", authRouter);

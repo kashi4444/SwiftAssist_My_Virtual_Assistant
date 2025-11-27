@@ -5,6 +5,7 @@ import { IoEyeOff } from "react-icons/io5";
 import { useNavigate } from 'react-router-dom';
 import { userDataContext } from '../context/UserContext.jsx';
 import axios from 'axios'
+import Footer from '../components/Footer.jsx';
 
 
 
@@ -35,7 +36,7 @@ function SignUp() {
     }
   }
   return (
-    <div className='w-full h-[100vh] bg-cover flex justify-center items-center' style={{backgroundImage: `url(${bg})`}}>
+    <div className='w-full h-[100vh] bg-cover flex justify-center items-center flex-col' style={{backgroundImage: `url(${bg})`}}>
     <form className='w-[90%] h-[600px] max-w-[500px] bg-[#00000062] backdrop-blur shadow-lg shadow-black flex flex-col items-center justify-center gap-[20px] px-[20px]' onSubmit={handleSignUp}>
       <h1 className='text-white text-[30px] font-semibold mb-[30px]'>Register to <span className='text-blue-400'>Virtual Assistant</span></h1>
     <input type='text' placeholder='Enter Your Name' className='w-full h-[60px] outline-none border-2 border-white bg-transparent text-white placeholder-gray-300 px-[20px] py-[10px] rounded-full text-[18px]' required onChange={(e)=> setName(e.target.value)} value={name}></input>
@@ -52,7 +53,9 @@ function SignUp() {
     <button className='min-w-[150px] h-[60px] mt-[30px] text-black font-semibold bg-white rounded-full text-[19px]' disabled = {loading}>{loading ? "Loading..." : "Sign Up"}</button>
     <p className='text-white text-[18px] cursor-pointer'>Already have an account ? <span className='text-blue-400' onClick={()=> navigate('/login')}>Login</span></p>
     </form>
-    
+
+    <Footer/>
+
     </div>
   )
 }

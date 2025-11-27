@@ -11,6 +11,7 @@ import { RiImageAddLine } from "react-icons/ri";
 import { userDataContext } from '../context/UserContext'
 import { useNavigate } from 'react-router-dom'
 import { MdKeyboardBackspace } from "react-icons/md";
+import Footer from '../components/Footer'
 
 function Customize() {
   const {serverUrl, userData, setUserData,frontendImage, setFrontendImage, backendImage, setBackendImage, selectedImage, setSelectedImage} = useContext(userDataContext);
@@ -44,6 +45,8 @@ function Customize() {
       
     </div>
     {selectedImage && <button className='min-w-[150px] h-[60px] mt-[30px] text-black font-semibold bg-white rounded-full text-[19px] cursor-pointer' onClick={()=> navigate('/customize2')}>Next</button>}
+
+    <Footer/>
       
     </div>
   )

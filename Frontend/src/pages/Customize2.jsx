@@ -3,6 +3,7 @@ import { userDataContext } from '../context/UserContext';
 import axios from 'axios';
 import { MdKeyboardBackspace } from "react-icons/md";
 import { useNavigate } from 'react-router-dom';
+import Footer from '../components/Footer';
 
 
 function Customize2() {
@@ -42,6 +43,8 @@ function Customize2() {
           handleUpdateAssistant()
           
           } }>{!loading ? "Finally Create Your Assistant" : "Loading..."}</button>}
+
+          <Footer/>
         
     </div>
   )

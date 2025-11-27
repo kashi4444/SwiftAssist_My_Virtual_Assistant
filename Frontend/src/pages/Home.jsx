@@ -6,6 +6,7 @@ import userImg from '../assets/user.gif'
 import axios from 'axios';
 import { CgMenuRight } from "react-icons/cg";
 import { RxCross1 } from "react-icons/rx";
+import Footer from '../components/Footer';
 
 
 function Home() {
@@ -245,6 +246,7 @@ function Home() {
 
       {!started && <button id='start-btn' className='text-white min-w-[150px] h-[60px] mt-[30px] text-black font-semibold rounded-full text-[19px] bg-blue-400 cursor-pointer px-[20px] py-[10px]' onClick={()=> setStarted(true)}>Let's get started</button>}
 
+      <Footer/>
       
     </div>
   )

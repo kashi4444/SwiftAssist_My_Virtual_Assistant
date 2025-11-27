@@ -2,7 +2,7 @@ import React, { createContext, useEffect, useState } from 'react'
 import axios from 'axios'
 export const userDataContext = createContext();
 function UserContext({children}) {
-    const serverUrl = "https://swiftassist-my-virtual-assist-backend.onrender.com"
+    const serverUrl = import.meta.env.VITE_API_URL
     const [userData, setUserData] = useState(null); 
     const[frontendImage, setFrontendImage] = useState(null);
     const[backendImage, setBackendImage] = useState(null);
